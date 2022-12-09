@@ -1,0 +1,19 @@
+#Configuring ospf
+# Importing netmiko library
+import netmiko
+device1 = {
+'device_type': 'cisco_ios',
+'ip': '192.168.2.1',
+'username"
+"cisco'
+'password': 'cisco secret'.
+'cisco'
+}
+# Connecting to the device
+net_connect = netmiko.ConnectHandler(**devicel)
+#Entering enable mode
+net_connect.enable()
+config_commands = ['router ospf 10', 'network 10.1.1.1 0.0.0.0 area 0']
+output = net_connect.send_config_set(config_commands) 
+net_connect.disconnect ()
+
